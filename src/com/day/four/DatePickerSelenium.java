@@ -11,7 +11,7 @@ public class DatePickerSelenium {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "D:\\Tools\\SeleniumDriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "D:\\personal\\my-projects\\chromedriver_win32\\chromedriver.exe");
         driver = new ChromeDriver();                // chrome driver
         driver.get("https://goo.gl/RVdKM9");        // get url
         driver.manage().window().maximize();        // maximise window
