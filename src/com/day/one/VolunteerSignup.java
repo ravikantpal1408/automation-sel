@@ -10,13 +10,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class VolunteerSignup {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "D:\\\\personal\\\\my-projects\\\\chromedriver_win32\\\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver",
+                "D:\\\\personal\\\\my-projects\\\\chromedriver_win32\\\\chromedriver.exe");
 
         WebDriver driver = new ChromeDriver();
 
@@ -24,18 +24,22 @@ public class VolunteerSignup {
         WebDriverWait myWait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3)); // implicit wait
-        /* if the element is present it wont wait , but if not - then maximum wait time will be 5 seconds */
+        /*
+         * if the element is present it wont wait , but if not - then maximum wait time
+         * will be 5 seconds
+         */
 
         driver.get("https://goo.gl/RVdKM9");
 
-        WebElement ele = myWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"RESULT_TextField-1\"]")));
+        WebElement ele = myWait
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"RESULT_TextField-1\"]")));
         ele.click();
 
         driver.manage().window().maximize();
 
         String title = driver.getTitle(); // return the page title
 
-        System.out.println("Title of the page is :"+ title);
+        System.out.println("Title of the page is :" + title);
 
         String url = driver.getCurrentUrl(); // return the current URL of the web page
 
@@ -62,7 +66,7 @@ public class VolunteerSignup {
         // Extract all the options and print them
         List<WebElement> opts = dropDownList.getOptions();
 
-        for(var items : opts) {
+        for (var items : opts) {
             System.out.println(items.getText());
         }
 
@@ -85,7 +89,6 @@ public class VolunteerSignup {
         driver.findElement(By.xpath("//*[@id=\"q15\"]/table/tbody/tr[7]/td/label")).click();
 
         // Text Area ->
-
 
         // Handle links
         driver.findElement(By.linkText("Software Testing Tutorials")).click();
