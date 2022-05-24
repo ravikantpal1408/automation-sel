@@ -11,16 +11,18 @@ public class DatePickerSelenium {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "D:\\personal\\my-projects\\chromedriver_win32\\chromedriver.exe");
-        driver = new ChromeDriver();                // chrome driver
-        driver.get("https://goo.gl/RVdKM9");        // get url
-        driver.manage().window().maximize();        // maximise window
+        System.setProperty("webdriver.chrome.driver",
+                "//Users//ravikantpal//my-projects//automation-sel//drivers//chromedriver");
+        driver = new ChromeDriver(); // chrome driver
+        driver.get("https://goo.gl/RVdKM9"); // get url
+        driver.manage().window().maximize(); // maximise window
 
         String year = "2019";
         String month = "August";
         String date = "14";
 
-        driver.findElement(By.xpath("this some ex-path to datepicker")).click();            // this will open and focus on the datepicker
+        driver.findElement(By.xpath("this some ex-path to datepicker")).click(); // this will open and focus on the
+                                                                                 // datepicker
 
         selectCurrentDate();
         selectPastDate(date, month);
@@ -28,10 +30,10 @@ public class DatePickerSelenium {
     }
 
     static void selectCurrentDate() {
-        Calendar calendar = Calendar.getInstance();                            // default JAVA calendar instance
-        int integerDate = calendar.get(Calendar.DATE);                         // return current date in integer format
-        String date = String.valueOf(integerDate);                             // get date in string format using integer value
-        driver.findElement(By.linkText(date));                                 // now select the date in datepicker
+        Calendar calendar = Calendar.getInstance(); // default JAVA calendar instance
+        int integerDate = calendar.get(Calendar.DATE); // return current date in integer format
+        String date = String.valueOf(integerDate); // get date in string format using integer value
+        driver.findElement(By.linkText(date)); // now select the date in datepicker
 
     }
 
@@ -41,12 +43,12 @@ public class DatePickerSelenium {
 
     static void selectFutureDate(String d, String m) {
         Calendar calendar = Calendar.getInstance();
-        int currentMonth = calendar.get(Calendar.MONTH);                        // return current date in integer format
+        int currentMonth = calendar.get(Calendar.MONTH); // return current date in integer format
 
         for (int i = currentMonth; i >= 1; i++) {
-            driver.findElement(By.xpath("date picker carrot icon")).click();            // next arrow
-            String month = driver.findElement(By.xpath("this is text")).getText();      //
-            if(month.equals(m)) {
+            driver.findElement(By.xpath("date picker carrot icon")).click(); // next arrow
+            String month = driver.findElement(By.xpath("this is text")).getText(); //
+            if (month.equals(m)) {
                 driver.findElement(By.linkText(d)).click();
                 break;
             }

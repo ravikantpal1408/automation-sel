@@ -16,7 +16,7 @@ public class VolunteerSignup {
     public static void main(String[] args) {
 
         System.setProperty("webdriver.chrome.driver",
-                "D:\\\\personal\\\\my-projects\\\\chromedriver_win32\\\\chromedriver.exe");
+                "//Users//ravikantpal//my-projects//automation-sel//drivers//chromedriver");
 
         WebDriver driver = new ChromeDriver();
 

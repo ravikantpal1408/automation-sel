@@ -14,7 +14,7 @@ public class MainApp {
     public static void main(String[] args) {
 
         System.setProperty("webdriver.chrome.driver",
-                "D:\\personal\\my-projects\\chromedriver_win32\\chromedriver.exe");
+                "//Users//ravikantpal//my-projects//automation-sel//drivers//chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); // implicit wait
 
