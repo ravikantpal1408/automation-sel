@@ -2,15 +2,15 @@ package com.day.three;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 import java.util.Set;
 
 public class HandleWindows {
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver",
-                "//Users//ravikantpal//my-projects//automation-sel//drivers//chromedriver");
-        WebDriver driver = new ChromeDriver();
+        System.setProperty("webdriver.edge.driver",
+                "//Users//ravikantpal//my-projects//automation-sel//drivers//msedgedriver");
+        WebDriver driver = new EdgeDriver();
 
         driver.get("http://demo.automationtesting.in/Windows.html");
         driver.manage().window().maximize();

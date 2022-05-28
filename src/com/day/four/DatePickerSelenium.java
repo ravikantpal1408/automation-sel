@@ -2,7 +2,8 @@ package com.day.four;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+// import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 import java.util.Calendar;
 
@@ -11,9 +12,9 @@ public class DatePickerSelenium {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver",
-                "//Users//ravikantpal//my-projects//automation-sel//drivers//chromedriver");
-        driver = new ChromeDriver(); // chrome driver
+        System.setProperty("webdriver.edge.driver",
+                "//Users//ravikantpal//my-projects//automation-sel//drivers//msedgedriver");
+        driver = new EdgeDriver(); // chrome driver
         driver.get("https://goo.gl/RVdKM9"); // get url
         driver.manage().window().maximize(); // maximise window
 

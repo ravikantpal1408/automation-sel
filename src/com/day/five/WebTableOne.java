@@ -1,14 +1,14 @@
 package com.day.five;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 public class WebTableOne {
 
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver",
-                "//Users//ravikantpal//my-projects//automation-sel//drivers//chromedriver");
-        var driver = new ChromeDriver();
+        System.setProperty("webdriver.edge.driver",
+                "//Users//ravikantpal//my-projects//automation-sel//drivers//msedgedriver");
+        var driver = new EdgeDriver();
 
         driver.get("//Users//ravikantpal//my-projects//automation-sel//SeleniumFiles//WebTable.html");
 
@@ -26,6 +26,9 @@ public class WebTableOne {
                 System.out.println(value);
             }
         }
+
+        driver.close();
+        driver.quit();
     }
 
 }

@@ -1,15 +1,15 @@
 package com.starter;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver",
-                "//Users//ravikantpal//my-projects//automation-sel//drivers//chromedriver");
+        System.setProperty("webdriver.edge.driver",
+                "//Users//ravikantpal//my-projects//automation-sel//drivers//msedgedriver");
 
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new EdgeDriver();
 
         driver.get("https://www.w3.org/TR/webdriver1/");
 

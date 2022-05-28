@@ -4,7 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 public class MainApp {
@@ -13,9 +13,9 @@ public class MainApp {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver",
-                "//Users//ravikantpal//my-projects//automation-sel//drivers//chromedriver");
-        driver = new ChromeDriver();
+        System.setProperty("webdriver.edge.driver",
+                "//Users//ravikantpal//my-projects//automation-sel//drivers//msedgedriver");
+        driver = new EdgeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); // implicit wait
 
         driver.get("https://opensource-demo.orangehrmlive.com/");

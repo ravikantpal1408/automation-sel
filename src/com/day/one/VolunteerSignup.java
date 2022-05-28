@@ -3,7 +3,8 @@ package com.day.one;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+// import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,10 +16,10 @@ public class VolunteerSignup {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver",
-                "//Users//ravikantpal//my-projects//automation-sel//drivers//chromedriver");
+        System.setProperty("webdriver.edge.driver",
+                "//Users//ravikantpal//my-projects//automation-sel//drivers//msedgedriver");
 
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new EdgeDriver();
 
         // explicit wait
         WebDriverWait myWait = new WebDriverWait(driver, Duration.ofSeconds(10));
